@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASBL La Renaissance - Inscriptions et suivi</title>
+  <meta name="description" content="Soutien scolaire et cours de langues. Créez votre compte, inscrivez vos enfants et gérez vos activités et cotisations.">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav-visiteur">
+    <a href="https://ecolelarenaissance.wixsite.com/ecolelarenaissance" target="_blank" rel="noopener noreferrer" aria-label="La Renaissance">
+      <img src="images/logo-color.png" alt="La Renaissance" class="logo">
+    </a>
+    <div class="cta">
+      <a href="#login" class="btn btn-secondary" id="btn-mon-profil">Mon Profil</a>
+      <a href="inscription.html" class="btn btn-primary">S'inscrire</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container">
+        <h1>Inscriptions et suivi en un seul endroit</h1>
+        <p class="subtitle">Soutien scolaire et cours de langues pour vos enfants.</p>
+        <div class="cta">
+          <a href="#login" class="btn btn-primary" id="btn-mon-profil-hero">Accéder à mon profil</a>
+          <a href="inscription.html" class="btn btn-secondary">Créer un compte</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="login" class="section-login">
+      <div class="container">
+        <div class="card" style="max-width: 420px; margin: 0 auto;">
+          <h2 style="margin: 0 0 10px; font-size: 1.25rem; color: var(--bleu-fonce);">Espace membre</h2>
+          <p style="margin: 0 0 20px; color: var(--gris-texte); font-size: 0.95rem;">Connectez-vous pour accéder à votre tableau de bord, gérer vos inscriptions et consulter vos documents.(mettre n'importe quoi pour le moment)</p>
+          <form id="form-login" novalidate aria-label="Formulaire de connexion">
+            <div class="form-group" id="login-email-group">
+              <label for="login-email" class="required">Email</label>
+              <input type="email" id="login-email" name="email" placeholder="votre@email.be" required autocomplete="email">
+              <span class="error-message" id="login-email-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group" id="login-password-group">
+              <label for="login-password" class="required">Mot de passe</label>
+              <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+              <span class="error-message" id="login-password-error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Se connecter</button>
+          </form>
+          <p style="margin: 20px 0 0; font-size: 0.95rem; color: var(--gris-texte); text-align: center;">Pas encore de compte ? <a href="inscription.html">S'inscrire</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+            <img src="images/logo-color.png" alt="" class="footer-logo-img">
+            </span>
+          </a>
+          <p class="footer-org">ASBL La Renaissance</p>
+          <p class="footer-desc">Soutien scolaire et cours de langues</p>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT</h4>
+          <p>Email: contact@larenaissance.eu</p>
+          <p>Téléphone: +32 486 85 95 44</p>
+          <p>Adresse: Rue Jean-Baptiste Ledoux 23A, Jumet, 6040</p>
+        </div>
+        <div class="footer-col">
+          <h4>RÉSEAUX</h4>
+          <p><a href="https://www.facebook.com/asbllarenaissance/about?locale=fr_FR">Facebook</p>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 Asbl La Renaissance. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

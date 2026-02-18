@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier - ASBL La Renaissance</title>
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="layout-membre">
+    <aside class="sidebar-membre">
+      <button type="button" class="sidebar-toggle-hamburger" aria-label="Ouvrir ou fermer le menu">
+        <span class="hamburger-icon" aria-hidden="true">☰</span>
+      </button>
+      <nav aria-label="Menu membre">
+        <ul>
+          <li><a href="../index.html"><img src="../images/assets/accueil.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Accueil</span></a></li>
+          <li><a href="profil.html"><img src="../images/assets/profil.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Mon profil</span></a></li>
+          <li><a href="dashboard.html"><img src="../images/assets/dashboard.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Tableau de bord</span></a></li>
+          <li><a href="mes-enfants.html"><img src="../images/assets/enfants.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Mes enfants</span></a></li>
+          <li><a href="inscriptions.html"><img src="../images/assets/inscriptions.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Inscriptions</span></a></li>
+          <li><a href="cotisations.html"><img src="../images/assets/cotisations.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Cotisations</span></a></li>
+          <li><a href="documents.html"><img src="../images/assets/documents.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Documents</span></a></li>
+          <li><a href="calendrier.html" class="active"><img src="../images/assets/calendrier.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Calendrier</span></a></li>
+          <li><a href="commentaires.html"><img src="../images/assets/commentaires.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Commentaires</span></a></li>
+          <li><a href="../index.html" class="link-deconnexion"><img src="../images/assets/deconnexion.png" alt="" class="sidebar-icon" aria-hidden="true"> <span class="sidebar-nav-label">Déconnexion</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main-membre">
+      <header class="header-membre">
+        <a href="../index.html" class="header-logo" aria-label="Accueil La Renaissance">
+          <img src="../images/logo-color.png" alt="La Renaissance" class="header-logo-img">
+        </a>
+        <div class="header-membre-right">
+          <div class="header-notif-wrap">
+            <button type="button" class="header-notif-btn" aria-label="Notifications" aria-expanded="false">
+            <img src="../images/assets/cloche-notif.png" alt="" class="header-notif-icon header-notif-icon--with-notif" aria-hidden="true">
+            <img src="../images/assets/cloche.png" alt="" class="header-notif-icon header-notif-icon--plain" aria-hidden="true">
+          </button>
+            <div class="header-notif-panel" id="header-notif-panel"><a href="commentaires.html" class="header-notif-link">(commentaire admin)</a></div>
+          </div>
+          <a href="profil.html" class="user">Marie Martin</a>
+        </div>
+      </header>
+      <div class="content-membre">
+        <h1 style="margin: 0 0 24px; color: var(--bleu-fonce);">Calendrier</h1>
+
+        <div class="card">
+          <h2 style="margin: 0 0 16px; font-size: 1.1rem;">Prochains cours</h2>
+          <ul style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--gris-border);">Lun. 18/02 — Soutien scolaire — Lucas</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--gris-border);">Mer. 20/02 — Cours de français — Lucas</li>
+            <li style="padding: 8px 0;">Ven. 22/02 — Soutien scolaire — Emma</li>
+          </ul>
+        </div>
+
+        <div class="calendrier-section" id="calendrier-section">
+          <div class="calendrier-header">
+            <button type="button" class="calendrier-nav calendrier-nav--prev" aria-label="Mois précédent">‹</button>
+            <h2 class="calendrier-month-year" id="calendrier-month-year"></h2>
+            <button type="button" class="calendrier-nav calendrier-nav--next" aria-label="Mois suivant">›</button>
+          </div>
+          <div class="calendrier-grid" id="calendrier-grid" role="grid" aria-label="Calendrier"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-deconnexion" class="modal" role="dialog" aria-labelledby="modal-deconnexion-title" aria-modal="true" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content modal-content--archiver">
+      <h2 id="modal-deconnexion-title" class="modal-title">Déconnexion</h2>
+      <p class="modal-text">Voulez-vous vraiment vous déconnecter ?</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary modal-btn-cancel">Annuler</button>
+        <button type="button" class="btn btn-primary modal-btn-confirm">Confirmer</button>
+      </div>
+    </div>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
