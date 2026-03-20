@@ -1,0 +1,98 @@
+<?php
+/**
+ * Vue : Page de connexion (Espace membre)
+ *
+ * Rôle : formulaire de connexion (email + mot de passe). La validation (champs requis,
+ * format email, longueur mot de passe) est gérée côté client par script.js ; en cas de
+ * succès, redirection vers le tableau de bord membre (maquette).
+ */
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASBL La Renaissance - Connexion</title>
+  <meta name="description" content="Soutien scolaire et cours de langues. Connectez-vous pour gérer vos inscriptions et cotisations.">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- En-tête visiteur : logo, lien Accueil (icône), Mon Profil, S'inscrire -->
+  <header class="nav-visiteur">
+    <a href="https://ecolelarenaissance.wixsite.com/ecolelarenaissance" target="_blank" rel="noopener noreferrer" aria-label="La Renaissance">
+      <img src="images/logo-color.png" alt="La Renaissance" class="logo">
+    </a>
+    <div class="cta">
+      <a href="index.php?page=accueil" class="btn btn-soft" aria-label="Accueil"><i class="bi bi-house-door" aria-hidden="true"></i></a>
+      <a href="#login" class="btn btn-secondary" id="btn-mon-profil">Mon Profil</a>
+      <a href="index.php?page=inscription" class="btn btn-primary">S'inscrire</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Bandeau hero -->
+    <section class="hero" id="accueil">
+      <div class="container">
+        <h1>Inscriptions et suivi en un seul endroit</h1>
+        <p class="subtitle">Soutien scolaire et cours de langues pour vos enfants.</p>
+      </div>
+    </section>
+
+    <!-- Zone connexion : carte contenant le formulaire (email, mot de passe, lien « Mot de passe oublié ») -->
+    <section id="login" class="section-login">
+      <div class="container">
+        <div class="card" style="max-width: 420px; margin: -150px auto 0;">
+          <h2 style="margin: 0 0 10px; font-size: 1.25rem; color: var(--bleuFonce);">Espace membre</h2>
+
+          <form id="form-login" novalidate aria-label="Formulaire de connexion">
+            <div class="form-group" id="login-email-group">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" name="email" placeholder="votre@email.be" required autocomplete="email">
+              <span class="error-message" id="login-email-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group" id="login-password-group">
+              <label for="login-password">Mot de passe</label>
+              <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+              <span class="error-message" id="login-password-error" aria-live="polite"></span>
+            </div>
+            <a href="#" class="btn-forgot-password">Mot de passe oublié ?</a>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Se connecter</button>
+          </form>
+          <p style="margin: 20px 0 0; font-size: 0.95rem; color: var(--grisTexte); text-align: center;">Pas encore de compte ? <a href="index.php?page=inscription">S'inscrire</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-color.png" alt="" class="footer-logo-img">
+          <p class="footer-org">ASBL La Renaissance</p>
+          <p class="footer-desc">Soutien scolaire et cours de langues</p>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT</h4>
+          <p>Email: contact@larenaissance.eu</p>
+          <p>Téléphone: +32 486 85 95 44</p>
+          <p>Adresse: Rue Jean-Baptiste Ledoux 23A, Jumet, 6040</p>
+        </div>
+        <div class="footer-col">
+          <h4>RÉSEAUX</h4>
+          <p><a href="https://www.facebook.com/asbllarenaissance/about?locale=fr_FR">Facebook</a></p>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 Asbl La Renaissance. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
